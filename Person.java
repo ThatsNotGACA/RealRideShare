@@ -1,15 +1,15 @@
+
 public class Person{
     private int destination;
     private boolean direction;
-    private int startLocation;
+    private int start;
 
-    public Person(int myDestination, int myStartLocation){
+    public Person(int myDestination, int myStart){
         destination = myDestination;
-        startLocation = myStartLocation;
-        direction = (destination>startLocation);
+        start = myStart;
+        direction = (destination > start);
         
     }
-
 
     public int getDestination(){
         return destination;
@@ -17,12 +17,12 @@ public class Person{
     public boolean getDirection(){
         return direction;
     }
-    public int startLocation(){
-        return startLocation;
+    public int getStartLocation(){
+        return start;
     }
 
     public String toString(){
-        return super.toString() + "Start: " + startLocation + " Destination: " + destination + " Going right? " +direction;
+        return super.toString() + "Start: " + start + " Destination: " + destination + " Going right? " + direction;
     }
 
 

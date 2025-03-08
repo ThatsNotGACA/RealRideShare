@@ -1,3 +1,4 @@
+
 public class Tester {
     public static void main(String[] args) {
         Person a = new Person(5,7);
@@ -6,6 +7,19 @@ public class Tester {
         System.out.println(a);
         System.out.println(b);
         System.out.println(c);
+
+        Car n = new Car(5,9);
+        System.out.println(n);
+        n.addPassenger(a);
+        System.out.println(n);
+
+        System.out.println(n.unload());
+
+        Road r = new Road();
+        r.toString();
+        r.pickupPassengers();
+        r.moveCars();
+        r.toString();
     }
     
 }
