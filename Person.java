@@ -22,7 +22,7 @@ public class Person{
     }
 
     public String toString(){
-        return super.toString() + "Start: " + start + " Destination: " + destination + " Going right? " + direction;
+        return "Person [Start: " + start + ", Destination: " + destination + ", Going right? " + direction + "]";
     }
 
 

@@ -32,21 +32,24 @@ public class Road {
         completed = new ArrayList<Person>();
 
     }
-    public void pickupPassengers(){
-        for (int i = 0; i < cars.size(); i++){
-            if(cars.get(i).hasRoom()){
-                for(int j = 0; j < persons.size(); j++){
-                    if(persons.get(j).getStartLocation() == cars.get(i).getLocation()){
-                        cars.get(i).addPassenger(persons.remove(j));
+    public void pickupPassengers() {
+        for (int i = 0; i < cars.size(); i++) {
+            if (cars.get(i).hasRoom()) {
+                for (int j = persons.size() - 1; j >= 0; j--){
+                    if (persons.get(j).getStartLocation() == cars.get(i).getLocation()) {
+                        cars.get(i).addPassenger(persons.remove(j)); 
                     }
                 }
             }
         }
     }
-    public void moveCars(){
-        for (int i = 0; i < cars.size(); i++){
-            completed.add(cars.get(i).unload());
-            cars.get(i).move();
+    public void moveCars() {
+        for (Car car : cars) {
+            ArrayList<Person> unloadedPassengers = car.unload();
+            for (int i = 0; i < unloadedPassengers.size(); i++) { 
+                completed.add(unloadedPassengers.get(i));
+            }
+            car.move();
         }
     }
     public String toString(){

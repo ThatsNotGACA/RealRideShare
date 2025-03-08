@@ -48,17 +48,17 @@ public class Car {
         return currentLocation;
     }
 
-    public Person unload(){
-        for (int i = 0; i < passengers.size(); i++){
-            Person a = passengers.get(i);
-            if(a.getDestination() == currentLocation){
-                return passengers.remove(i);
+    public ArrayList<Person> unload() {
+        ArrayList<Person> unloadedPassengers = new ArrayList<>();
+        
+        for (int i = 0; i < passengers.size(); i++) {
+            if (passengers.get(i).getDestination() == currentLocation) {
+                unloadedPassengers.add(passengers.remove(i));
+                i--;
             }
         }
-        return null;
-        
-    }
-
+        return unloadedPassengers;
+    }    
     public String toString(){
         return super.toString() + " Destination: " + destination + " Current location: " + currentLocation + " Going right? " + direction + " Passengers: " + passengers;
     }
