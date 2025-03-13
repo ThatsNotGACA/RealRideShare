@@ -60,8 +60,9 @@ public class Car {
         return unloadedPassengers;
     }    
     public String toString(){
-        return super.toString() + " Destination: " + destination + " Current location: " + currentLocation + " Going right? " + direction + " Passengers: " + passengers;
-    }
+        return "Car [Destination: " + destination + ", Current location: " + currentLocation + 
+        ", Going right? " + direction + ", Passengers: " + passengers + "]";
+ }
 
     
 }
