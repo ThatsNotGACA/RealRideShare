@@ -8,8 +8,8 @@ public class Station {
     private int number;
 
     public Station(int myNumber){
-        waitingLeft= new ArrayList<Person>();
-        waitingRight= new ArrayList<Person>();
+        waitingLeft = new ArrayList<Person>();
+        waitingRight = new ArrayList<Person>();
         completed = new ArrayList<Person>();
         number = myNumber;
     }
