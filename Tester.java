@@ -59,5 +59,9 @@ public class Tester {
         }
 
         System.out.println("Final Car: " + car);
+
+        System.out.println("Final Road State:\n" + road.toString());
+        System.out.println("Percentage of passengers who reached their destination: " + road.Completion() + "%");
+
     }
 }

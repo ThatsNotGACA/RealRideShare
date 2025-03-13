@@ -51,28 +51,30 @@ public class Road {
             }
             car.move();
         }
-    }
+    }    
     public String toString(){
         String s = "Cars: \n";
         for (Car c : cars){
             s += c.toString();
             s += "\n";
-        }
+            }
         s += " Waiting people: \n";
         for(Person pers : persons){
             s += pers.toString();
             s += "\n";
-        }
+            }
         if(completed.size() > 0){
         s += "Completed people: \n";
         for(Person a : completed){
             s += a.toString();
             s += "\n";
+            }
         }
-    }
         return s;
     }
 
+    public double Completion() {
+        return (completed.size() * 100.0) / (persons.size() + completed.size());
 
-    
+    }
 }
