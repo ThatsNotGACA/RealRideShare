@@ -48,6 +48,8 @@ public class Car {
         return currentLocation;
     }
 
+
+    // Method for handing back person eligible to be dropped off, removes person from car
     public ArrayList<Person> unload() {
         ArrayList<Person> unloadedPassengers = new ArrayList<>();
         
